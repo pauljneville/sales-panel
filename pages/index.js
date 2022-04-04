@@ -5,6 +5,7 @@ import { Line } from 'react-chartjs-2';
 // need these 2 unused imports to stop "Unhandled Runtime Error Error: "##" is not a registered scale."
 import { Chart as ChartJS } from 'chart.js/auto'
 import { Chart } from 'react-chartjs-2'
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -124,8 +125,11 @@ export default function Home() {
         <h1 className="text-2xl sm:text-4xl text-center" >
           Welcome to <span className="text-blue-600">Panel Charts</span>
         </h1>
-        <OrdersPerState />
-        <RevenuePerDay />
+        {/* <OrdersPerState />
+        <RevenuePerDay /> */}
+        <Link href="/sales-dashboard">
+          <a className="text-center underline hover:text-blue-400">&rarr; to Sales Dashboard</a>
+        </Link>
       </main >
 
       <footer className="flex py-2 border-t border-[#eaeaea] justify-center items-center max-h-[5rem] w-full">
